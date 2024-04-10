@@ -81,7 +81,7 @@ jobs:
       - name: build 1
         shell: pwsh
         working-directory: ./build
-        run: ./build-sync-manifest.ps1 -TargetRegistry $env:ALIYUN_DOCKERHUB
+        run: ./build-sync-manifest.ps1 -Namespace hyx1229 -TargetRegistry $env:ALIYUN_DOCKERHUB
 
   # ----------------------------------- sync -----------------------------------
 
