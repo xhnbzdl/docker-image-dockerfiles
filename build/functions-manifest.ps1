@@ -100,6 +100,7 @@ function ImagesCopyManifest($DockerfileDir, $Registry, $Namespace, $TargetRegist
 
     # 复制
     CopyManifest -TargetRegistry $TargetRegistry `
+        -TargetNamespace $TargetNamespace `
         -ManifestImageTag $manifestImageTag `
         -Plateforms $manifestPlateforms
 
@@ -196,6 +197,8 @@ FROM --platform=`$TARGETPLATFORM `$IMAGETAG
 
     # 编译参数
     $imageTag = "${manifestImageTag}".TrimStart("/")
+    Write-Host "============= echo $imageTag ============="
+
     $plateformImageTag = $TargetRegistry + "/" + $TargetNamespace + "/" + $imageTag
     $plateform = ($Plateforms -join (","))
     $buildArgsOption = " --build-arg IMAGETAG=${ManifestImageTag} "
