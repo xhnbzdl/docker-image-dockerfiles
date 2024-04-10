@@ -2,7 +2,9 @@ param(
     # image registry
     [string]$Registry,
     # image namespace
-    [string]$Namespace = "eternals",
+    [string]$Namespace = "hyx1229",
+    # target image namespace
+    [string]$TargetNamespace = "eternals",
     # target image registry
     [string]$TargetRegistry
 )
@@ -34,7 +36,8 @@ foreach ($imgName in $buildImageList) {
     ImagesCopyManifest -DockerfileDir $dockerfileDir `
         -Registry $Registry `
         -Namespace $Namespace `
-        -TargetRegistry $TargetRegistry
+        -TargetRegistry $TargetRegistry `
+        -TargetNamespace $TargetNamespace
 }
 
 # 回到当前路径

@@ -72,7 +72,7 @@ function ImagesBuildManifest($DockerfileDir, $Registry, $Namespace) {
 }
 
 # 复制复合镜像
-function ImagesCopyManifest($DockerfileDir, $Registry, $Namespace, $TargetRegistry) {
+function ImagesCopyManifest($DockerfileDir, $Registry, $Namespace, $TargetRegistry,$TargetNamespace) {
 
     # 切换到此目录
     Set-Location $DockerfileDir
@@ -181,7 +181,7 @@ function CreateManifestImage($ManifestImageTag, $ManifestPlateformImageTags) {
 }
 
 # 复制Manifest镜像
-function CopyManifest($TargetRegistry, $ManifestImageTag, $Plateforms) {
+function CopyManifest($TargetRegistry, $TargetNamespace, $ManifestImageTag, $Plateforms) {
 
     # 临时用的文件
     $dockerfile = "Syncfile"
@@ -195,7 +195,8 @@ FROM --platform=`$TARGETPLATFORM `$IMAGETAG
     WriteFile -Path "./${dockerfile}" -Content $dockerfileConent
 
     # 编译参数
-    $plateformImageTag = $TargetRegistry + "/" + $ManifestImageTag
+    $imageTag = "${manifestImageTag}".TrimStart("/")
+    $plateformImageTag = $TargetRegistry + "/" + $TargetNamespace + "/" + $imageTag
     $plateform = ($Plateforms -join (","))
     $buildArgsOption = " --build-arg IMAGETAG=${ManifestImageTag} "
 
