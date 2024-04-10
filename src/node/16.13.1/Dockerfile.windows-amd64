@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/windows/servercore:ltsc2022
+
+USER ContainerAdministrator
+
+COPY ./node-v16.13.1-x64.msi .
+COPY ./pngquant.zip .
+COPY ./vc_redist.x64.exe .
+
+RUN powershell -Command "Expand-Archive -Path './pngquant.zip' -DestinationPath '/Windows/System32'" \
+    && start /B ./vc_redist.x64.exe /quiet /install \
+    && start /B C:/Windows/System32/pngquant/pngquant.exe
+
+# 下载并安装 Node.js
+RUN powershell Start-Process -Wait -FilePath "msiexec.exe" -ArgumentList "/i", "node-v16.13.1-x64.msi", "/qn" \
+    && powershell Remove-Item -Force node-v16.13.1-x64.msi
+
+# 将 Node.js 添加到系统环境变量中
+RUN setx PATH "%PATH%;C:\Program Files\nodejs"
+
+# 全局安装 yarn
+RUN npm install -g yarn
