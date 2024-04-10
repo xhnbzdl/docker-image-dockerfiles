@@ -197,17 +197,11 @@ FROM --platform=`$TARGETPLATFORM `$IMAGETAG
 
     # 编译参数
     $imageTag = "${manifestImageTag}".Split("/")[1]
-    Write-Host "============= echo $imageTag ============="
-
     $plateformImageTag = $TargetRegistry + "/" + $TargetNamespace + "/" + $imageTag
+    Write-Host "============= push image $plateformImageTag ============="
+
     $plateform = ($Plateforms -join (","))
     $buildArgsOption = " --build-arg IMAGETAG=${ManifestImageTag} "
-
-    # $ManifestImageTag = "staneee/test:mulite-os"
-    # $plateformImageTag = "staneee/test:linux2"
-    # $plateform = "linux/amd64,linux/arm64"
-    # $dockerfile = "Dockerfile.linux2"
-    # $buildArgsOption = " --build-arg IMAGETAG=${ManifestImageTag} "
 
     # 执行编译参数
     CmdExec -CmdStr ("docker buildx build" `
