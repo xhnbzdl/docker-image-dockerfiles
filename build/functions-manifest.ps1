@@ -196,7 +196,7 @@ FROM --platform=`$TARGETPLATFORM `$IMAGETAG
     WriteFile -Path "./${dockerfile}" -Content $dockerfileConent
 
     # 编译参数
-    $imageTag = "${manifestImageTag}".TrimStart("/")
+    $imageTag = "${manifestImageTag}".Split("/")[1]
     Write-Host "============= echo $imageTag ============="
 
     $plateformImageTag = $TargetRegistry + "/" + $TargetNamespace + "/" + $imageTag
