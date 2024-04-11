@@ -3,6 +3,7 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # ####
+    ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
     # "aspnet:6-centos-7.9.2009-gdi-fontconfig",
     # "aspnet:6-focal-gdi-fontconfig",
     # "aspnet:5-focal-gdi-fontconfig",
@@ -92,7 +93,6 @@ $syncSample = @(
     # "duaneduan/wechat-webhook:v1",
     # "mysql:5.7.43",
     # "docker.osgeo.org/geoserver:2.24.x",
-    "mcr.microsoft.com/dotnet/aspnet:6.0-windowsservercore-ltsc2022",
     ""
 )
 
