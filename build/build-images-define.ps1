@@ -92,6 +92,7 @@ $syncSample = @(
     # "duaneduan/wechat-webhook:v1",
     # "mysql:5.7.43",
     # "docker.osgeo.org/geoserver:2.24.x",
+    "mcr.microsoft.com/dotnet/aspnet:6.0-windowsservercore-ltsc2022",
     ""
 )
 
