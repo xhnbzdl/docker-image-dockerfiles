@@ -19,3 +19,5 @@ RUN setx PATH "%PATH%;C:\Program Files\nodejs"
 
 # 全局安装 yarn
 RUN npm install -g yarn
+
+RUN set
