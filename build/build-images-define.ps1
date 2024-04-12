@@ -13,7 +13,7 @@ $buildImageList = @(
     # "dotnet:6-focal",
     # "dotnet:5-focal-gdi-fontconfig",
     # "dotnet:6-focal-gdi-fontconfig",
-    # "nginx:1.19.6", 
+    "nginx:1.19.6", 
     # "nginx:1.19.6-basic",
     # "nginx:1.19.6-appconfig-prod",
     # "nginx:1.19.6-appconfig-prod-pda",
@@ -21,7 +21,7 @@ $buildImageList = @(
     # "nginx:1.19.6-wait-for-it",
     # "node:8.9.4",
     # "node:14.21.3",
-    "node:16.13.1",
+    # "node:16.13.1", #阿里云的不可用，docker hub可用
     # "node:20.10.0",
     # "powershell:lts-debian-10-focal",
     # "powershell:lts-debian-10-focal-node-14",

@@ -1,0 +1,18 @@
+FROM mcr.microsoft.com/windows/servercore:ltsc2022
+
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+
+USER ContainerAdministrator
+
+RUN $nginx_version='1.19.6'; \
+    Invoke-WebRequest -OutFile './nginx.zip' https://nginx.org/download/nginx-$nginx_version.zip; \
+    Expand-Archive -Path './nginx.zip' -DestinationPath '/'; \
+    Rename-Item -Path "/nginx-${nginx_version}" -NewName 'nginx'; \
+    Remove-Item -Force './nginx.zip';
+
+WORKDIR /nginx
+
+# start
+EXPOSE 80
+
+ENTRYPOINT ["nginx.exe", "-g", "daemon off;"]
