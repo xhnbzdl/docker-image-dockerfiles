@@ -28,19 +28,16 @@ COPY ./windows-packages/node-v16.13.1-x64.msi .
 COPY ./windows-packages/pngquant.zip .
 COPY ./windows-packages/vc_redist.x64.exe .
 
-RUN powershell -Command "Expand-Archive -Path './pngquant.zip' -DestinationPath '/Windows/System32'"
-
-RUN powershell Start-Process -FilePath './vc_redist.x64.exe' -ArgumentList '/install', '/quiet', '/norestart' -Wait; \
-    Remove-Item './vc_redist.x64.exe'
-
-RUN powershell Start-Process -FilePath 'C:/Windows/System32/pngquant/pngquant.exe' -Wait;
-
-# 下载并安装 Node.js
-RUN powershell Start-Process -Wait -FilePath "msiexec.exe" -ArgumentList "/i", "node-v16.13.1-x64.msi", "/qn" \
-    && powershell Remove-Item -Force node-v16.13.1-x64.msi
+RUN Expand-Archive -Path './pngquant.zip' -DestinationPath '/Windows/System32'; \
+    Remove-Item -Force ./pngquant.zip; \
+    Start-Process -FilePath './vc_redist.x64.exe' -ArgumentList '/install', '/quiet', '/norestart' -Wait; \
+    Remove-Item -Force ./vc_redist.x64.exe; \
+    Start-Process -FilePath 'C:/Windows/System32/pngquant/pngquant.exe' -Wait; \
+    Start-Process -Wait -FilePath "msiexec.exe" -ArgumentList "/i", "node-v16.13.1-x64.msi", "/qn"; \
+    Remove-Item -Force node-v16.13.1-x64.msi
 
 # 将 Node.js 添加到系统环境变量中
-RUN setx PATH "%PATH%;C:\Program Files\nodejs"
+RUN cmd.exe /c "setx PATH \"%PATH%;C:\Program Files\nodejs\""
 
 # 全局安装 yarn
 RUN npm install -g yarn
