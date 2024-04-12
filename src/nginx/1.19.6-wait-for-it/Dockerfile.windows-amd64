@@ -1,0 +1,9 @@
+FROM hyx1229/nginx:1.19.6
+
+COPY ./wait-for-it.ps1 .
+
+ENV NGINX_WAITHOST=localhost NGINX_WAITPORT=80
+
+# entrypoint
+ENTRYPOINT ./wait-for-it.ps1 ${env:NGINX_WAITHOST}:${env:NGINX_WAITPORT} -timeout=0; \
+            ./nginx.exe

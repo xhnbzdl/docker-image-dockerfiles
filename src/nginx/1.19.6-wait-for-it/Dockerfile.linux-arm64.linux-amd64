@@ -1,0 +1,10 @@
+FROM --platform=$TARGETPLATFORM hyx1229/nginx:1.19.6
+
+COPY ./scripts/wait-for-it.sh .
+
+ENV NGINX_WAITHOST=localhost NGINX_WAITPORT=80
+
+RUN chmod +x /wait-for-it.sh
+
+ENTRYPOINT /wait-for-it.sh $NGINX_WAITHOST:$NGINX_WAITPORT --timeout=0 \
+    &&  nginx -g 'daemon off;'
