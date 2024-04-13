@@ -4,7 +4,7 @@ $onlyPrint = $false
 $buildImageList = @(
     # ####
     # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
-    ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
+    # ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
     # "aspnet:6-centos-7.9.2009-gdi-fontconfig",
     # "aspnet:6-focal-gdi-fontconfig",
     # "aspnet:5-focal-gdi-fontconfig",
@@ -24,6 +24,7 @@ $buildImageList = @(
     # "node:14.21.3",
     # "node:16.13.1", #阿里云的不可用，docker hub可用
     # "node:20.10.0",
+    "powershell:lts-windowsservercore-ltsc2022",
     # "powershell:lts-debian-10-focal",
     # "powershell:lts-debian-10-focal-node-14",
     # "powershell:lts-debian-10-focal-node-16",
