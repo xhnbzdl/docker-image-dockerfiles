@@ -3,6 +3,7 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # ####
+    "dotnet-sdk:6.0",
     # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
     # ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
     # "aspnet:6-centos-7.9.2009-gdi-fontconfig",
@@ -25,7 +26,7 @@ $buildImageList = @(
     # "node:16.13.1", #阿里云的不可用，docker hub可用
     # "node:20.10.0",
     # "powershell:lts-windowsservercore-ltsc2022",
-    "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",
+    # "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",
     # "powershell:lts-debian-10-focal",
     # "powershell:lts-debian-10-focal-node-14",
     # "powershell:lts-debian-10-focal-node-16",
@@ -103,5 +104,5 @@ $syncSample = @(
 $syncRenameDict = @{
     # "mcr.microsoft.com/windows/nanoserver:ltsc2022" = "windows-nanoserver:ltsc2022"
     # "mcr.microsoft.com/windows/servercore:ltsc2022" = "windows-servercore:ltsc2022",
-    "mcr.microsoft.com/dotnet/sdk:6.0" = "dotnet-sdk:6.0"
+    # "mcr.microsoft.com/dotnet/sdk:6.0" = "dotnet-sdk:6.0"
 }
