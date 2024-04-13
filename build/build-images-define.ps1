@@ -102,5 +102,6 @@ $syncSample = @(
 # 需要重命名的
 $syncRenameDict = @{
     # "mcr.microsoft.com/windows/nanoserver:ltsc2022" = "windows-nanoserver:ltsc2022"
-    # "mcr.microsoft.com/windows/servercore:ltsc2022" = "windows-servercore:ltsc2022"
+    # "mcr.microsoft.com/windows/servercore:ltsc2022" = "windows-servercore:ltsc2022",
+    "mcr.microsoft.com/dotnet/sdk:6.0" = "dotnet-sdk:6.0"
 }
