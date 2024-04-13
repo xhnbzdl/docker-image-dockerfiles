@@ -25,7 +25,7 @@ $buildImageList = @(
     # "node:16.13.1", #阿里云的不可用，docker hub可用
     # "node:20.10.0",
     # "powershell:lts-windowsservercore-ltsc2022",
-    # "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",
+    "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",
     # "powershell:lts-debian-10-focal",
     # "powershell:lts-debian-10-focal-node-14",
     # "powershell:lts-debian-10-focal-node-16",
