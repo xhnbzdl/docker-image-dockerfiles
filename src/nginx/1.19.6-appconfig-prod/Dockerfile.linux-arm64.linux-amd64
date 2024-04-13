@@ -1,0 +1,12 @@
+FROM --platform=$TARGETPLATFORM hyx1229/nginx:1.19.6
+
+COPY ./scripts/before_shell_appconfig_prod.sh .
+
+# appconfig.prod.json content
+ENV APPCONFIG=''
+
+RUN chmod +x /before_shell_appconfig_prod.sh
+
+# entrypoint
+ENTRYPOINT /before_shell_appconfig_prod.sh \
+    && nginx -g "daemon off;"

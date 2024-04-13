@@ -1,0 +1,10 @@
+FROM hyx1229/nginx:1.19.6
+
+COPY ./scripts/before_shell_appconfig_prod.ps1 .
+
+# appconfig.prod.json content
+ENV APPCONFIG=''
+
+# entrypoint
+ENTRYPOINT ./before_shell_appconfig_prod.ps1; \
+    ./nginx.exe
