@@ -4,6 +4,7 @@ $onlyPrint = $false
 $buildImageList = @(
     # ####
     # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
+    ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
     # "aspnet:6-centos-7.9.2009-gdi-fontconfig",
     # "aspnet:6-focal-gdi-fontconfig",
     # "aspnet:5-focal-gdi-fontconfig",
@@ -15,7 +16,7 @@ $buildImageList = @(
     # "dotnet:6-focal-gdi-fontconfig",
     # "nginx:1.19.6", 
     # "nginx:1.19.6-basic",
-    "nginx:1.19.6-appconfig-prod",
+    # "nginx:1.19.6-appconfig-prod",
     # "nginx:1.19.6-appconfig-prod-pda",
     # "nginx:1.19.6-shell-runner",
     # "nginx:1.19.6-wait-for-it",
