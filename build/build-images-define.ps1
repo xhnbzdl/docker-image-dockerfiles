@@ -2,7 +2,7 @@ $onlyPrint = $false
 
 # 编译镜像 linux/amd64
 $buildImageList = @(
-    # ####
+    # #####
     "dotnet-sdk:6.0",
     # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
     # ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
