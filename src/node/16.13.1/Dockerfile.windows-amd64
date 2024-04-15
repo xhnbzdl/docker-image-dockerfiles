@@ -10,17 +10,11 @@ RUN $node_version='16.13.1'; \
     Expand-Archive -Path './nodejs.zip' -DestinationPath '/'; \
     Rename-Item -Path "/node-v${node_version}-win-x64" -NewName 'nodejs'; \
     Remove-Item -Force './nodejs.zip'; \
-    # download pngquant
-    Invoke-WebRequest -OutFile './pngquant.zip' https://pngquant.org/pngquant-windows.zip; \
-    Expand-Archive -Path './pngquant.zip' -DestinationPath '/'; \
-    Remove-Item -Force './pngquant.zip'; \
-    # download vc_redist.x64
+    # download and install vc_redist.x64
     $vc_redist_installUrl='https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe'; \
     Invoke-WebRequest -OutFile './vc_redist.x64.exe' $vc_redist_installUrl; \
-    # install pngquant,vc_redist
     Start-Process -FilePath './vc_redist.x64.exe' -NoNewWindow -ArgumentList '/install', '/quiet', '/norestart' -Wait; \
     Remove-Item -Force ./vc_redist.x64.exe; \
-    Start-Process -FilePath 'C:/pngquant/pngquant.exe' -Wait; \
     "
 
 RUN cmd.exe /c "setx PATH \"%PATH%;C:\nodejs\"" /M
