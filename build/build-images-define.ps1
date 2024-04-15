@@ -25,9 +25,9 @@ $buildImageList = @(
     # "nginx:1.19.6-wait-for-it",
     # "node:8.9.4",
     # "node:14.21.3",
-    # "node:16.13.1", #阿里云的不可用，docker hub可用
+    "node:16.13.1", #阿里云的不可用，docker hub可用
     # "node:20.10.0",
-    "powershell:lts-nanoserver-ltsc2022",
+    # "powershell:lts-nanoserver-ltsc2022",
     # "powershell:lts-windowsservercore-ltsc2022",
     # "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",
     # "powershell:lts-debian-10-focal",

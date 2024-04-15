@@ -4,20 +4,27 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPref
 
 USER ContainerAdministrator
 
-COPY ./windows-packages/node-v16.13.1-x64.msi .
-COPY ./windows-packages/pngquant.zip .
-COPY ./windows-packages/vc_redist.x64.exe .
-
-RUN Expand-Archive -Path './pngquant.zip' -DestinationPath '/Windows/System32'; \
-    Remove-Item -Force ./pngquant.zip; \
-    Start-Process -FilePath './vc_redist.x64.exe' -ArgumentList '/install', '/quiet', '/norestart' -Wait; \
+RUN $node_version='16.13.1'; \
+    # download nodejs https://nodejs.org/dist/v$node_version/node-v$node_version-win-x64.zip
+    Invoke-WebRequest -OutFile './nodejs.zip' https://registry.npmmirror.com/-/binary/node/v$node_version/node-v$node_version-win-x64.zip; \
+    Expand-Archive -Path './nodejs.zip' -DestinationPath '/'; \
+    Rename-Item -Path "/node-v${node_version}-win-x64" -NewName 'nodejs'; \
+    Remove-Item -Force './nodejs.zip'; \
+    # download pngquant
+    Invoke-WebRequest -OutFile './pngquant.zip' https://pngquant.org/pngquant-windows.zip; \
+    Expand-Archive -Path './pngquant.zip' -DestinationPath '/'; \
+    Remove-Item -Force './pngquant.zip'; \
+    # download vc_redist.x64
+    $vc_redist_installUrl='https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe'; \
+    Invoke-WebRequest -OutFile './vc_redist.x64.exe' $vc_redist_installUrl; \
+    # install pngquant,vc_redist
+    Start-Process -FilePath './vc_redist.x64.exe' -NoNewWindow -ArgumentList '/install', '/quiet', '/norestart' -Wait; \
     Remove-Item -Force ./vc_redist.x64.exe; \
-    Start-Process -FilePath 'C:/Windows/System32/pngquant/pngquant.exe' -Wait; \
-    Start-Process -Wait -FilePath "msiexec.exe" -ArgumentList "/i", "node-v16.13.1-x64.msi", "/qn"; \
-    Remove-Item -Force node-v16.13.1-x64.msi
+    Start-Process -FilePath 'C:/pngquant/pngquant.exe' -Wait; \
+    "
 
-# 将 Node.js 添加到系统环境变量中
-RUN cmd.exe /c "setx PATH \"%PATH%;C:\Program Files\nodejs\""
+RUN cmd.exe /c "setx PATH \"%PATH%;C:\nodejs\"" /M
 
 # 全局安装 yarn
 RUN npm install -g yarn
+
