@@ -27,4 +27,3 @@ RUN cmd.exe /c "setx PATH \"%PATH%;C:\nodejs\"" /M
 
 # 全局安装 yarn
 RUN npm install -g yarn
-
