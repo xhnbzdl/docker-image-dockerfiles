@@ -1,3 +1,5 @@
+# escape=`
+
 FROM hyx1229/powershell:lts-nanoserver-ltsc2022
 
 SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
@@ -7,10 +9,10 @@ USER ContainerAdministrator
 WORKDIR /redis
 
 # other version https://github.com/tporadowski/redis/releases/tag/v5.0.14.1
-RUN $redis_version='3.0.504'; \
-    $redis_downloadUrl= 'https://github.com/microsoftarchive/redis/releases/download/win-${redis_version}/Redis-x64-${redis_version}.zip'; \
-    Invoke-WebRequest -Uri $redis_downloadUrl -OutFile './redis.zip'; \
-    Expand-Archive -Path './redis.zip' -DestinationPath '/redis'; \
+RUN $redis_version='3.0.504'; `
+    $redis_downloadUrl= 'https://github.com/microsoftarchive/redis/releases/download/win-${redis_version}/Redis-x64-${redis_version}.zip'; `
+    Invoke-WebRequest -OutFile './redis.zip' -Uri $redis_downloadUrl; `
+    Expand-Archive -Path './redis.zip' -DestinationPath '/redis'; `
     Remove-Item -Force './redis.zip';
 
 EXPOSE 6379
