@@ -64,7 +64,7 @@ $buildImageList = @(
     # "cp-zookeeper:7.3.2",
     # "cp-kafka:7.3.2",
     # "wait-for-it:default",
-    # "minio:RELEASE.2021-12-27T07-23-18Z",
+    "minio:RELEASE.2024-04-06T05-26-02Z",
     # "mongo:4.2.8-bionic",
     # "haproxy:2.2.28-alpine",
     # "mysql:8.1.0",
