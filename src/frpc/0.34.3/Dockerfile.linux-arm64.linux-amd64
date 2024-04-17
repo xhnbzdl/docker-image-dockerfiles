@@ -6,7 +6,7 @@ ENV FRPC_INI=''
 # copy before shell runner
 WORKDIR /
 COPY ./scripts/before_shell_frpc_ini.sh .
-RUN chmod +x ./scripts/before_shell_frpc_ini.sh
+RUN chmod +x ./before_shell_frpc_ini.sh
 
 # entrypoint
 ENTRYPOINT /before_shell_runner.sh \
