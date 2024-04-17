@@ -18,7 +18,5 @@ EXPOSE 7000 7500
 
 ENV FRPC_INI=''
 
-ENTRYPOINT ./before_shell_frpc_ini.ps1; \
+CMD ./before_shell_frpc_ini.ps1; \
     ./frpc.exe -c C:\\frpc\\frpc.ini
-
-# CMD ["frpc.exe", "-c", "C:\\frpc\\frpc.ini"]
