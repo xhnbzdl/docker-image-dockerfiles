@@ -9,7 +9,6 @@ WORKDIR /redis
 # other version https://github.com/tporadowski/redis/releases/tag/v5.0.14.1
 RUN $redis_version='3.0.504'; \
     Invoke-WebRequest -OutFile './redis.zip' -Uri https://github.com/microsoftarchive/redis/releases/download/win-$redis_version/Redis-x64-$redis_version.zip; \
-    # Invoke-WebRequest -OutFile './redis.zip' -Uri https://github.com/microsoftarchive/redis/releases/download/win-3.0.504/Redis-x64-3.0.504.zip; \
     Expand-Archive -Path './redis.zip' -DestinationPath '/redis'; \
     Remove-Item -Force './redis.zip';
 
