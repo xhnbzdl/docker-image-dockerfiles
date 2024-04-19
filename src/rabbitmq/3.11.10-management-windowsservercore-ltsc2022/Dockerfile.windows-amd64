@@ -6,7 +6,7 @@ ARG RABBITMQ_VERSION=3.11.10
 FROM mcr.microsoft.com/windows/servercore:ltsc2022
 USER ContainerAdministrator
 
-# SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; "]
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; "]
 
 ARG ERLANG_VERSION
 ARG RABBITMQ_VERSION
@@ -17,12 +17,7 @@ ENV ERLANG_VERSION=$ERLANG_VERSION `
     RABBITMQ_BASE=C:\rabbitmq\data `
     RABBITMQ_CONFIG_FILE=c:\rabbitmq\data\rabbitmq.conf
 
-RUN setx /M PATH "%PATH%;%ERLANG_HOME%\bin"
-
-RUN set
-
-RUN powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; `
-    Write-Host -Object 'Downloading Erlang OTP' ; `
+RUN Write-Host -Object 'Downloading Erlang OTP' ; `
     Invoke-WebRequest -UseBasicParsing -Uri $('http://erlang.org/download/otp_win64_{0}.exe' -f $env:ERLANG_VERSION) -OutFile './otp_win64.exe'; `
     Unblock-File -Path './otp_win64.exe'; `
     Write-Host -Object 'Installing Erlang OTP'; `
@@ -40,11 +35,7 @@ RUN powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = '
     Remove-Item -Path './rabbitmq.zip'; `
     Write-Host -Object 'Done Installing RabbitMQ'
 
-# RUN New-Item -Path 'C:\rabbitmq\data\rabbitmq.conf' -ItemType File -Force; \
-#     Set-Content -Path 'C:\rabbitmq\data\rabbitmq.conf' -Value 'loopback_users.guest = false'
-
-
-# RUN cmd.exe /c "setx PATH \"%PATH%;%ERLANG_HOME%\bin\"" /M
+RUN setx /M PATH "%PATH%;%ERLANG_HOME%\bin"
 
 RUN c:\rabbitmq\sbin\rabbitmq-plugins.bat enable rabbitmq_management --offline
 
