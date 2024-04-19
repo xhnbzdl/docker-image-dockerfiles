@@ -13,7 +13,8 @@ ENV ERLANG_VERSION=$ERLANG_VERSION \
     RABBITMQ_VERSION=$RABBITMQ_VERSION \
     ERLANG_HOME=C:\erlang \
     RABBITMQ_BASE=C:\rabbitmq\data \
-    RABBITMQ_CONFIG_FILE=c:\rabbitmq\data\rabbitmq.conf
+    RABBITMQ_CONFIG_FILE=c:\rabbitmq\data\rabbitmq.conf \
+    PATH=%PATH%;%ERLANG_HOME%\bin
 
 RUN Write-Host -Object 'Downloading Erlang OTP' ; \
     Invoke-WebRequest -UseBasicParsing -Uri $('http://erlang.org/download/otp_win64_{0}.exe' -f $env:ERLANG_VERSION) -OutFile './otp_win64.exe'; \
