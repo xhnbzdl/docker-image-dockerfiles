@@ -28,7 +28,7 @@ RUN Write-Host -Object 'Downloading Erlang OTP' ; \
     Unblock-File -Path './rabbitmq.zip'; \
     Write-Host -Object 'Extracting RabbitMQ Zip'; \
     Expand-Archive -Path './rabbitmq.zip' -DestinationPath '/'; \
-    Rename-Item -Path '/rabbitmq_server-${env:RABBITMQ_VERSION}' -NewName 'rabbitmq'; \
+    Rename-Item -Path "/rabbitmq_server-${env:RABBITMQ_VERSION}" -NewName 'rabbitmq'; \
     Write-Host -Object 'Removing RabbitMQ Zip'; \
     Remove-Item -Path './rabbitmq.zip'; \
     Write-Host -Object 'Done Installing RabbitMQ'
