@@ -34,14 +34,16 @@ RUN powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = '
     Remove-Item -Path './rabbitmq.zip'; \
     Write-Host -Object 'Done Installing RabbitMQ'
 
-RUN New-Item -Path 'C:\rabbitmq\data\rabbitmq.conf' -ItemType File -Force; \
-    Set-Content -Path 'C:\rabbitmq\data\rabbitmq.conf' -Value 'loopback_users.guest = false'
+# RUN New-Item -Path 'C:\rabbitmq\data\rabbitmq.conf' -ItemType File -Force; \
+#     Set-Content -Path 'C:\rabbitmq\data\rabbitmq.conf' -Value 'loopback_users.guest = false'
 
 RUN setx /M PATH "%PATH%;%ERLANG_HOME%\bin"
 
 # RUN cmd.exe /c "setx PATH \"%PATH%;%ERLANG_HOME%\bin\"" /M
 
 RUN c:\rabbitmq\sbin\rabbitmq-plugins.bat enable rabbitmq_management --offline
+
+RUN ["cmd", "/c", "echo loopback_users.guest = false> C:\\rabbitmq\\data\\rabbitmq.conf"]
 
 EXPOSE 5672 15672 15673
 
