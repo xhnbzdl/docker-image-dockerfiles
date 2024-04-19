@@ -3,7 +3,7 @@
 ARG ERLANG_VERSION=25.3.2.9
 ARG RABBITMQ_VERSION=3.11.10
 
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
+FROM mcr.microsoft.com/windows/servercore:ltsc2022 As Installer
 USER ContainerAdministrator
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; "]
@@ -36,11 +36,11 @@ RUN Write-Host -Object 'Downloading Erlang OTP' ; `
 FROM mcr.microsoft.com/windows/nanoserver:ltsc2022
 USER ContainerAdministrator
 
-COPY --from=installer ["/erlang", "/erlang"]
-COPY --from=installer ["/rabbitmq", "/rabbitmq"]
-COPY --from=installer ["/Windows/System32/vcruntime140.dll", "/Windows/System32"]
-COPY --from=installer ["/Windows/System32/msvcp140.dll", "/Windows/System32"]
-COPY --from=installer ["/Windows/System32/vcruntime140_1.dll", "/Windows/System32"]
+COPY --from=Installer ["/erlang", "/erlang"]
+COPY --from=Installer ["/rabbitmq", "/rabbitmq"]
+COPY --from=Installer ["/Windows/System32/vcruntime140.dll", "/Windows/System32"]
+COPY --from=Installer ["/Windows/System32/msvcp140.dll", "/Windows/System32"]
+COPY --from=Installer ["/Windows/System32/vcruntime140_1.dll", "/Windows/System32"]
 
 ENV ERLANG_HOME=C:\erlang `
     RABBITMQ_BASE=C:\rabbitmq\data `
