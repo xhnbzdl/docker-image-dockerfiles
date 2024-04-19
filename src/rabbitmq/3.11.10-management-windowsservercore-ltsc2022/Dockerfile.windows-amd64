@@ -33,7 +33,8 @@ RUN Write-Host -Object 'Downloading Erlang OTP' ; \
     Remove-Item -Path './rabbitmq.zip'; \
     Write-Host -Object 'Done Installing RabbitMQ'
 
-RUN ["cmd.exe", "/c", "echo loopback_users.guest = false> C:\\rabbitmq\\data\\rabbitmq.conf"]
+# RUN ["cmd.exe", "/c", "echo loopback_users.guest = false> C:\\rabbitmq\\data\\rabbitmq.conf"]
+RUN Set-Content -Path 'C:\rabbitmq\data\rabbitmq.conf' -Value 'loopback_users.guest = false'
 
 # RUN setx /M PATH "%PATH%;%ERLANG_HOME%\bin"
 
