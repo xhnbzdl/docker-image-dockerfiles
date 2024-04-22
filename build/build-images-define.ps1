@@ -7,7 +7,7 @@ $buildImageList = @(
     # "dotnet-aspnet:6.0-powershell-7.2.19",
     # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
     # ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
-    "dotnet-sdk:6.0",
+    # "dotnet-sdk:6.0",
     # "aspnet:6-centos-7.9.2009-gdi-fontconfig",
     # "aspnet:6-focal-gdi-fontconfig",
     # "aspnet:5-focal-gdi-fontconfig",
@@ -17,7 +17,7 @@ $buildImageList = @(
     # "dotnet:6-focal",
     # "dotnet:5-focal-gdi-fontconfig",
     # "dotnet:6-focal-gdi-fontconfig",
-    # "nginx:1.19.6",q
+    "nginx:1.19.6",
     # "nginx:1.19.6-basic",
     # "nginx:1.19.6-appconfig-prod",q
     # "nginx:1.19.6-appconfig-prod-pda",
