@@ -67,7 +67,7 @@ $buildImageList = @(
     # "cp-kafka:7.3.2",
     # "wait-for-it:default",
     "minio:RELEASE.2024-04-06T05-26-02Z",
-    "minio:RELEASE.windows-latest",
+    # "minio:RELEASE.windows-latest",
     # "mongo:4.2.8-bionic",
     # "haproxy:2.2.28-alpine",
     # "mysql:8.1.0",
