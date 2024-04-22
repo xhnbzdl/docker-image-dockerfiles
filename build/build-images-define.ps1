@@ -4,10 +4,10 @@ $onlyPrint = $false
 $buildImageList = @(
     # #####
     "dotnet-aspnet:6.0",
-    "dotnet-aspnet:6.0-powershell-7.2.19",
-    ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
-    ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
-    "dotnet-sdk:6.0",
+    # "dotnet-aspnet:6.0-powershell-7.2.19",q
+    # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,q
+    # ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,q
+    # "dotnet-sdk:6.0",q
     # "aspnet:6-centos-7.9.2009-gdi-fontconfig",
     # "aspnet:6-focal-gdi-fontconfig",
     # "aspnet:5-focal-gdi-fontconfig",
@@ -17,19 +17,19 @@ $buildImageList = @(
     # "dotnet:6-focal",
     # "dotnet:5-focal-gdi-fontconfig",
     # "dotnet:6-focal-gdi-fontconfig",
-    "nginx:1.19.6",
+    # "nginx:1.19.6",q
     # "nginx:1.19.6-basic",
-    "nginx:1.19.6-appconfig-prod",
+    # "nginx:1.19.6-appconfig-prod",q
     # "nginx:1.19.6-appconfig-prod-pda",
     # "nginx:1.19.6-shell-runner",
-    "nginx:1.19.6-wait-for-it",
+    # "nginx:1.19.6-wait-for-it",q
     # "node:8.9.4",
     # "node:14.21.3",
-    "node:16.13.1",
+    # "node:16.13.1",q
     # "node:20.10.0",
-    "powershell:lts-nanoserver-ltsc2022",
-    "powershell:lts-windowsservercore-ltsc2022",
-    "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",
+    # "powershell:lts-nanoserver-ltsc2022",q
+    # "powershell:lts-windowsservercore-ltsc2022",q
+    # "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",q
     # "powershell:lts-debian-10-focal",
     # "powershell:lts-debian-10-focal-node-14",
     # "powershell:lts-debian-10-focal-node-16",
@@ -42,8 +42,8 @@ $buildImageList = @(
     # "powershell:lts-debian-10-focal-dotnet-6",
     # "powershell:lts-debian-10-focal-dotnet-6-node-16",
     # "powershell:lts-debian-10-focal-dotnet-6-node-20",
-    "frps:0.34.3",
-    "frpc:0.34.3",
+    # "frps:0.34.3",q
+    # "frpc:0.34.3",q
     # "common-scripts:alpine-3.17",
     # "ntp:chrony",
     # "portainer:agent-2.16.1",
@@ -51,12 +51,12 @@ $buildImageList = @(
     # "self-signed-ssl:openssl-1.1.1",
     # "redis:6.0.16",
     # "redis:6.2.4",
-    "redis:3.0.504",
+    # "redis:3.0.504",q
     # "keepalived:2.0.20",
     # "keepalived:2.0.20-docker",
-    "rabbitmq:3.11.10-management",
-    "rabbitmq:3.11.10-management-nanoserver-ltsc2022",
-    "rabbitmq:3.11.10-management-windowsservercore-ltsc2022",
+    # "rabbitmq:3.11.10-management",q
+    # "rabbitmq:3.11.10-management-nanoserver-ltsc2022",
+    # "rabbitmq:3.11.10-management-windowsservercore-ltsc2022",q
     # "rabbitmq:3.11.10-management-mqtt",
     # "android-template:uni-app-3.7.11.81746_20230428",
     # "gitlab-runner:v14.10.1",
@@ -66,8 +66,8 @@ $buildImageList = @(
     # "cp-zookeeper:7.3.2",
     # "cp-kafka:7.3.2",
     # "wait-for-it:default",
-    "minio:RELEASE.2024-04-06T05-26-02Z",
-    "minio:windows-latest",
+    # "minio:RELEASE.2024-04-06T05-26-02Z",q
+    # "minio:windows-latest",q
     # "mongo:4.2.8-bionic",
     # "haproxy:2.2.28-alpine",
     # "mysql:8.1.0",
