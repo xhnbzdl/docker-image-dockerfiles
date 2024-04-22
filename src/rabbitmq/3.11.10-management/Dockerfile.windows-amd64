@@ -1,1 +1,1 @@
-FROM hyx1229/rabbitmq:3.11.10-management-nanoserver-ltsc2022
+FROM eternalfree/rabbitmq:3.11.10-management-nanoserver-ltsc2022

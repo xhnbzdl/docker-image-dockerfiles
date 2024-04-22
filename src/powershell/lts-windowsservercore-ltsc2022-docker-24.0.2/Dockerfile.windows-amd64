@@ -1,6 +1,6 @@
 # escape=`
 
-FROM hyx1229/powershell:lts-windowsservercore-ltsc2022
+FROM eternalfree/powershell:lts-windowsservercore-ltsc2022
 
 WORKDIR /docker
 

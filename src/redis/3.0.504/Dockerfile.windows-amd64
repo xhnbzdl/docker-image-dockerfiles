@@ -1,4 +1,4 @@
-FROM hyx1229/powershell:lts-nanoserver-ltsc2022
+FROM eternalfree/powershell:lts-nanoserver-ltsc2022
 
 SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 

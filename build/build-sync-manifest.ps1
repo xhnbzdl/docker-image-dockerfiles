@@ -2,9 +2,9 @@ param(
     # image registry
     [string]$Registry,
     # image namespace
-    [string]$Namespace = "hyx1229",
+    [string]$Namespace = "eternalfree",
     # target image namespace
-    [string]$TargetNamespace = "eternals",
+    [string]$TargetNamespace = "eternalfree",
     # target image registry
     [string]$TargetRegistry
 )

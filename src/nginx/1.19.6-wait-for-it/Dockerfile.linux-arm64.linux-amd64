@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM hyx1229/nginx:1.19.6
+FROM --platform=$TARGETPLATFORM eternalfree/nginx:1.19.6
 
 COPY ./scripts/wait-for-it.sh .
 

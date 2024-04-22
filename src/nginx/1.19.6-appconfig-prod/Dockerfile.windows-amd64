@@ -1,4 +1,4 @@
-FROM hyx1229/nginx:1.19.6
+FROM eternalfree/nginx:1.19.6
 
 COPY ./scripts/before_shell_appconfig_prod.ps1 .
 

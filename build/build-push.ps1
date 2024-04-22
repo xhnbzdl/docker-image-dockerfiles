@@ -2,7 +2,7 @@ param(
     # image registry
     [string]$Registry,
     # image namespace
-    [string]$Namespace = "eternals"
+    [string]$Namespace = "eternalfree"
 )
 
 # 执行公用脚本
