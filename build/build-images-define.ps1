@@ -3,9 +3,9 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
-    # "dotnet-aspnet:6.0",
-    # "dotnet-aspnet:6.0-powershell-7.2.19",
-    # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
+    "dotnet-aspnet:6.0",
+    "dotnet-aspnet:6.0-powershell-7.2.19",
+    ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
     # ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
     # "dotnet-sdk:6.0",
     # "aspnet:6-centos-7.9.2009-gdi-fontconfig",
@@ -54,7 +54,7 @@ $buildImageList = @(
     # "redis:3.0.504",
     # "keepalived:2.0.20",
     # "keepalived:2.0.20-docker",
-    "rabbitmq:3.11.10-management",
+    # "rabbitmq:3.11.10-management",
     # "rabbitmq:3.11.10-management-nanoserver-ltsc2022",
     # "rabbitmq:3.11.10-management-windowsservercore-ltsc2022",
     # "rabbitmq:3.11.10-management-mqtt",
