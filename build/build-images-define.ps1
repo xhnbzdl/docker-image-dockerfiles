@@ -19,15 +19,15 @@ $buildImageList = @(
     # "dotnet:6-focal-gdi-fontconfig",
     # "nginx:1.19.6",
     # "nginx:1.19.6-basic",
-    "nginx:1.19.6-appconfig-prod",
+    # "nginx:1.19.6-appconfig-prod",
     # "nginx:1.19.6-appconfig-prod-pda",
     # "nginx:1.19.6-shell-runner",
-    "nginx:1.19.6-wait-for-it",
+    # "nginx:1.19.6-wait-for-it",
     # "node:8.9.4",
     # "node:14.21.3",
-    # "node:16.13.1",q
+    "node:16.13.1",
     # "node:20.10.0",
-    # "powershell:lts-nanoserver-ltsc2022",q
+    "powershell:lts-nanoserver-ltsc2022",
     # "powershell:lts-windowsservercore-ltsc2022",q
     # "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",q
     # "powershell:lts-debian-10-focal",
