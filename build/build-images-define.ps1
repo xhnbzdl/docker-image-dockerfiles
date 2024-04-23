@@ -42,8 +42,8 @@ $buildImageList = @(
     # "powershell:lts-debian-10-focal-dotnet-6",
     # "powershell:lts-debian-10-focal-dotnet-6-node-16",
     # "powershell:lts-debian-10-focal-dotnet-6-node-20",
-    "frps:0.34.3",
-    "frpc:0.34.3",
+    # "frps:0.34.3",
+    # "frpc:0.34.3",
     # "common-scripts:alpine-3.17",
     # "ntp:chrony",
     # "portainer:agent-2.16.1",
@@ -51,12 +51,12 @@ $buildImageList = @(
     # "self-signed-ssl:openssl-1.1.1",
     # "redis:6.0.16",
     # "redis:6.2.4",
-    # "redis:3.0.504",q
+    "redis:3.0.504",
     # "keepalived:2.0.20",
     # "keepalived:2.0.20-docker",
+    "rabbitmq:3.11.10-management-windowsservercore-ltsc2022",
+    "rabbitmq:3.11.10-management-nanoserver-ltsc2022",
     # "rabbitmq:3.11.10-management",q
-    # "rabbitmq:3.11.10-management-nanoserver-ltsc2022",
-    # "rabbitmq:3.11.10-management-windowsservercore-ltsc2022",q
     # "rabbitmq:3.11.10-management-mqtt",
     # "android-template:uni-app-3.7.11.81746_20230428",
     # "gitlab-runner:v14.10.1",
