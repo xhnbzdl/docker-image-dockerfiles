@@ -3,11 +3,13 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
+    "portainer:agent-2.16.2",
+    "portainer:ce-2.16.2",
     # "dotnet-aspnet:6.0",
     # "dotnet-aspnet:6.0-powershell-7.2.19",
     # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
     # ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
-    "dotnet-sdk:6.0",
+    # "dotnet-sdk:6.0",
     # "aspnet:6-centos-7.9.2009-gdi-fontconfig",
     # "aspnet:6-focal-gdi-fontconfig",
     # "aspnet:5-focal-gdi-fontconfig",
