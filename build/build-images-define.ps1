@@ -3,8 +3,8 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
-    "portainer:agent-2.16.2",
-    "portainer:ce-2.16.2",
+    # "portainer:agent-2.16.2",
+    # "portainer:ce-2.16.2",
     # "dotnet-aspnet:6.0",
     # "dotnet-aspnet:6.0-powershell-7.2.19",
     # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
@@ -54,7 +54,7 @@ $buildImageList = @(
     # "redis:6.0.16",
     # "redis:6.2.4",
     # "redis:3.0.504",
-    # "keepalived:2.0.20",
+    "keepalived:2.0.20",
     # "keepalived:2.0.20-docker",
     # "rabbitmq:3.11.10-management-windowsservercore-ltsc2022",
     # "rabbitmq:3.11.10-management-nanoserver-ltsc2022",
@@ -72,7 +72,7 @@ $buildImageList = @(
     # "minio:RELEASE.2024-04-06T05-26-02Z",
     # "minio:windows-latest",
     # "mongo:4.2.8-bionic",
-    # "haproxy:2.2.28-alpine",
+    "haproxy:2.2.28-alpine",
     # "mysql:8.1.0",
     # # ## 
     # "antlr4:4.12.0",
