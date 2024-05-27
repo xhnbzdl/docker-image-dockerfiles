@@ -4,6 +4,6 @@ ENV NODE_ID ""
 
 USER root
 
-COPY ./scripts/startup.sh /
+COPY ./scripts/startup.sh /startup.sh
 
 ENTRYPOINT  [ "/startup.sh" ]
