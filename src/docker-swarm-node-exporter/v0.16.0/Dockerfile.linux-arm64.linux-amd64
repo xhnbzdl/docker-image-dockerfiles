@@ -6,6 +6,6 @@ USER root
 
 COPY ./scripts/startup.sh /startup.sh
 
-RUN chomd +x /startup.sh
+RUN chmod +x /startup.sh
 
 ENTRYPOINT  [ "/startup.sh" ]
