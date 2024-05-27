@@ -54,7 +54,7 @@ $buildImageList = @(
     # "redis:6.0.16",
     # "redis:6.2.4",
     # "redis:3.0.504",
-    "keepalived:2.0.20",
+    # "keepalived:2.0.20",
     # "keepalived:2.0.20-docker",
     # "rabbitmq:3.11.10-management-windowsservercore-ltsc2022",
     # "rabbitmq:3.11.10-management-nanoserver-ltsc2022",
@@ -72,7 +72,7 @@ $buildImageList = @(
     # "minio:RELEASE.2024-04-06T05-26-02Z",
     # "minio:windows-latest",
     # "mongo:4.2.8-bionic",
-    "haproxy:2.2.28-alpine",
+    # "haproxy:2.2.28-alpine",
     # "mysql:8.1.0",
     # # ## 
     # "antlr4:4.12.0",
@@ -90,23 +90,15 @@ $buildImageList = @(
 
 # 同步镜像，不需要重命名的
 $syncSample = @(
-    # "grafana/promtail:main",
-    # "grafana/loki:main",
-    # "grafana/grafana:8.4.0",
-    # "stefanprodan/caddy:0.10.10",
-    # "stefanprodan/swarmprom-prometheus:v2.5.0",
-    # "stefanprodan/swarmprom-node-exporter:v0.16.0",
-    # "stefanprodan/swarmprom-alertmanager:v0.14.0",
-    # "google/cadvisor:v0.33.0",
-    # "prom/alertmanager:v0.26.0",
-    # "prom/prometheus:v2.47.0",
+    "grafana/promtail:2.8.4",
+    "grafana/loki:2.8.4",
+    "grafana/grafana:9.5.2",
+    "google/cadvisor:v0.33.0",
+    "prom/alertmanager:v0.26.0",
+    "prom/prometheus:v2.47.0",
     # "flaviostutz/docker-swarm-node-exporter:1.1.1",
-    # "grafana/grafana:9.5.2",
-    # "grafana/loki:2.8.4",
-    # "grafana/promtail:2.8.4",
-    # "duaneduan/wechat-webhook:v1",
+    "duaneduan/wechat-webhook:v1",
     # "mysql:5.7.43",
-    # "docker.osgeo.org/geoserver:2.24.x",
     ""
 )
 
