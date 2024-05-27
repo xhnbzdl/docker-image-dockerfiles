@@ -3,6 +3,7 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
+    "docker-swarm-node-exporter:v0.16.0"
     # "portainer:agent-2.16.2",
     # "portainer:ce-2.16.2",
     # "dotnet-aspnet:6.0",
@@ -90,14 +91,14 @@ $buildImageList = @(
 
 # 同步镜像，不需要重命名的
 $syncSample = @(
-    "grafana/promtail:2.8.4",
-    "grafana/loki:2.8.4",
-    "grafana/grafana:9.5.2",
-    "google/cadvisor:v0.33.0",
-    "prom/alertmanager:v0.26.0",
-    "prom/prometheus:v2.47.0",
+    # "grafana/promtail:2.8.4",
+    # "grafana/loki:2.8.4",
+    # "grafana/grafana:9.5.2",
+    # "google/cadvisor:v0.33.0",
+    # "prom/alertmanager:v0.26.0",
+    # "prom/prometheus:v2.47.0",
     # "flaviostutz/docker-swarm-node-exporter:1.1.1",
-    "duaneduan/wechat-webhook:v1",
+    # "duaneduan/wechat-webhook:v1",
     # "mysql:5.7.43",
     ""
 )

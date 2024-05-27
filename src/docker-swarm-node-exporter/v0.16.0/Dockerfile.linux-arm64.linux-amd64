@@ -1,0 +1,9 @@
+FROM prom/node-exporter:v0.16.0
+
+ENV NODE_ID ""
+
+USER root
+
+COPY ./scripts/startup.sh /
+
+ENTRYPOINT  [ "/startup.sh" ]
