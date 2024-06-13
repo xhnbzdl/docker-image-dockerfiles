@@ -3,7 +3,8 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
-    "docker-swarm-node-exporter:v0.16.0"
+    "mongo-express:1.0.0-alpha.4-wait-for-it",
+    # "docker-swarm-node-exporter:v0.16.0"
     # "portainer:agent-2.16.2",
     # "portainer:ce-2.16.2",
     # "dotnet-aspnet:6.0",
