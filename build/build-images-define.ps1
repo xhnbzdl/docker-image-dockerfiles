@@ -3,9 +3,10 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
+    "emqx:5.1.0",
     # "registry:2",
     # "redis:6.2.12",
-    "redis:6.2.4",
+    # "redis:6.2.4",
     # "mongo-express:1.0.0-alpha.4-wait-for-it",
     # "docker-swarm-node-exporter:v0.16.0"
     # "portainer:agent-2.16.2",
