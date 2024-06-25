@@ -1,0 +1,1 @@
+FROM --platform=$TARGETPLATFORM apacherocketmq/rocketmq-dashboard:latest  AS base
