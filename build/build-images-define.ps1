@@ -3,6 +3,7 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
+    "registry:2",
     # "redis:6.2.12",
     # "mongo-express:1.0.0-alpha.4-wait-for-it",
     # "docker-swarm-node-exporter:v0.16.0"
@@ -76,7 +77,7 @@ $buildImageList = @(
     # "minio:windows-latest",
     # "mongo:4.2.8-bionic",
     # "haproxy:2.2.28-alpine",
-    "mysql:8.1.0",
+    # "mysql:8.1.0",
     # # ## 
     # "antlr4:4.12.0",
     # "antlr4:4.6",
