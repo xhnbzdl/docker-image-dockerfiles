@@ -3,6 +3,7 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
+    "nacos-server:v2.1.1",
     # "emqx:5.1.0",
     # "registry:2",
     # "redis:6.2.12",
@@ -87,7 +88,7 @@ $buildImageList = @(
     # "antlr4:4.6",
     # "android:33.0.2",
     # "android:30.0.3",
-    "mssql:2019-latest",
+    # "mssql:2019-latest",
     # "redis:3.0.5",
     # "dotnet:2.1-bionic",
     # "aspnet:2.1-bionic",
