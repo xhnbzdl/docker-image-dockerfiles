@@ -3,7 +3,7 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
-    "nacos-server:v2.1.1",
+    # "nacos-server:v2.1.1",
     # "emqx:5.1.0",
     # "registry:2",
     # "redis:6.2.12",
@@ -66,6 +66,7 @@ $buildImageList = @(
     # "rabbitmq:3.11.10-management-windowsservercore-ltsc2022",
     # "rabbitmq:3.11.10-management-nanoserver-ltsc2022",
     # "rabbitmq:3.11.10-management",
+    "rabbitmq:3.8-management",
     # "rabbitmq:3.11.10-management-mqtt",
     # "android-template:uni-app-3.7.11.81746_20230428",
     # "gitlab-runner:v14.10.1",
