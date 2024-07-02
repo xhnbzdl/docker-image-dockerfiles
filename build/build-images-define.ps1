@@ -3,8 +3,8 @@ $onlyPrint = $false
 # 编译镜像 linux/amd64
 $buildImageList = @(
     # #####
-    "rocketmq:4.9.7",
-    "rocketmq:dashboard-latest",
+    # "rocketmq:4.9.7",
+    # "rocketmq:dashboard-latest",
     # "nacos-server:v2.1.1",
     # "emqx:5.1.0",
     # "registry:2",
@@ -70,7 +70,7 @@ $buildImageList = @(
     # "rabbitmq:3.11.10-management",
     # "rabbitmq:3.8-management",
     # "rabbitmq:3.11.10-management-mqtt",
-    # "android-template:uni-app-3.7.11.81746_20230428",
+    "android-template:uni-app-3.7.11.81746_20230428",
     # "gitlab-runner:v14.10.1",
     # "gitlab-runner:v15.11.1",
     # "gitlab-runner-helper:x86_64-v16.10.0-servercore21H2",
