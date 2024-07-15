@@ -112,6 +112,7 @@ $syncSample = @(
     # "flaviostutz/docker-swarm-node-exporter:1.1.1",
     # "duaneduan/wechat-webhook:v1",
     # "mysql:5.7.43",
+    "gitlab/gitlab-runner:v14.10.1",
     ""
 )
 
