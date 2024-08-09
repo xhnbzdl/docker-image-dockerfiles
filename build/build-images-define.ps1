@@ -37,6 +37,7 @@ $buildImageList = @(
     # "node:8.9.4",
     # "node:14.21.3",
     # "node:16.13.1",
+     "node:18.0.0",
     # "node:20.10.0",
     # "powershell:lts-nanoserver-ltsc2022",
     # "powershell:lts-windowsservercore-ltsc2022",
@@ -56,7 +57,7 @@ $buildImageList = @(
     # "frps:0.34.3",
     # "frpc:0.34.3",
     # "common-scripts:alpine-3.17",
-    "ntp:latest",
+    # "ntp:latest",
     # "dns-server:11.1.1",
     # "portainer:agent-2.16.1",
     # "portainer:ce-2.16.1",
@@ -112,7 +113,7 @@ $syncSample = @(
     # "flaviostutz/docker-swarm-node-exporter:1.1.1",
     # "duaneduan/wechat-webhook:v1",
     # "mysql:5.7.43",
-    "gitlab/gitlab-runner:v14.10.1",
+    # "gitlab/gitlab-runner:v14.10.1",
     ""
 )
 
