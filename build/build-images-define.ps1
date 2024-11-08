@@ -37,7 +37,7 @@ $buildImageList = @(
     # "node:8.9.4",
     # "node:14.21.3",
     # "node:16.13.1",
-     "node:18.0.0",
+    #  "node:18.0.0",
     # "node:20.10.0",
     # "powershell:lts-nanoserver-ltsc2022",
     # "powershell:lts-windowsservercore-ltsc2022",
@@ -114,6 +114,7 @@ $syncSample = @(
     # "duaneduan/wechat-webhook:v1",
     # "mysql:5.7.43",
     # "gitlab/gitlab-runner:v14.10.1",
+    "gcr.io/cadvisor/cadvisor:latest",
     ""
 )
 
