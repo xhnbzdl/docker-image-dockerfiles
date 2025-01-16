@@ -28,7 +28,7 @@ $buildImageList = @(
     # "dotnet:6-focal",
     # "dotnet:5-focal-gdi-fontconfig",
     # "dotnet:6-focal-gdi-fontconfig",
-    "nginx:1.26.1",
+    # "nginx:1.26.1",
     # "nginx:1.19.6",
     # "nginx:1.19.6-basic",
     # "nginx:1.19.6-appconfig-prod",
@@ -38,8 +38,8 @@ $buildImageList = @(
     # "node:8.9.4",
     # "node:14.21.3",
     # "node:16.13.1",
-    #  "node:18.0.0",
-    # "node:20.10.0",
+    # "node:18.0.0",
+    "node:22",
     # "powershell:lts-nanoserver-ltsc2022",
     # "powershell:lts-windowsservercore-ltsc2022",
     # "powershell:lts-windowsservercore-ltsc2022-docker-24.0.2",
@@ -99,6 +99,7 @@ $buildImageList = @(
     # "dotnet:2.1-bionic",
     # "aspnet:2.1-bionic",
     # "aspnet:2.1-bionic-fontconfig",
+    "puppeteer:23.11.1",
     ""
 )
 

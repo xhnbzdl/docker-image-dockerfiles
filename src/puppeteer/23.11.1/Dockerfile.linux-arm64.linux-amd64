@@ -1,0 +1,1 @@
+FROM --platform=$TARGETPLATFORM ghcr.io/puppeteer/puppeteer:23.11.1
