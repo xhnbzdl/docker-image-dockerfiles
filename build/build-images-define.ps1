@@ -125,5 +125,8 @@ $syncSample = @(
 $syncRenameDict = @{
     # "mcr.microsoft.com/windows/nanoserver:ltsc2022" = "windows-nanoserver:ltsc2022"
     # "mcr.microsoft.com/windows/servercore:ltsc2022" = "windows-servercore:ltsc2022",
-    # "mcr.microsoft.com/dotnet/sdk:6.0" = "dotnet-sdk:6.0"
+    # "mcr.microsoft.com/dotnet/sdk:6.0" = "dotnet-sdk:6.0",
+    "calico/cni:v3.25.0" = "calico:cni-v3.25.0",
+    "calico/node:v3.25.0" = "calico:node-v3.25.0",
+    "calico/kube-controllers:v3.25.0" = "calico:kube-controllers-v3.25.0"
 }
