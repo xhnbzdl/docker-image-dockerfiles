@@ -35,7 +35,7 @@ $buildImageList = @(
     # "nginx:1.19.6-appconfig-prod-pda",
     # "nginx:1.19.6-shell-runner",
     # "nginx:1.19.6-wait-for-it",
-    "nginx:1.26.1-wait-for-it",
+    # "nginx:1.26.1-wait-for-it",
     # "node:8.9.4",
     # "node:14.21.3",
     # "node:16.13.1",
