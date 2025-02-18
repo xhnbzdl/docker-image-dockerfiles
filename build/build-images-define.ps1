@@ -16,8 +16,8 @@ $buildImageList = @(
     # "aspnet:6-focal-puppeteer", # 未完成
     # "android-template:uni-app-3.7.11.81746_20230428",
     "calico:cni-v3.25.0",
-    "calico:node-v3.25.0",
-    "calico:kube-controllers-v3.25.0",
+    # "calico:node-v3.25.0",
+    # "calico:kube-controllers-v3.25.0",
     # "clash:v1.16.0",
     # "common-scripts:alpine-3.17",
     # "cp-zookeeper:7.3.2",
