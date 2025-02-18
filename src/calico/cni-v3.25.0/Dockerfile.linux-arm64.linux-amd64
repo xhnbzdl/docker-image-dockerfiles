@@ -1,2 +1,2 @@
-FROM --platform=$TARGETPLATFORM technitium/dns-server:11.1.1  AS base
+FROM --platform=$TARGETPLATFORM docker.io/calico/node:v3.25.0  AS base
     
