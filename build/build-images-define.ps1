@@ -15,7 +15,7 @@ $buildImageList = @(
     # "aspnet:5-focal-puppeteer", # 未完成
     # "aspnet:6-focal-puppeteer", # 未完成
     # "android-template:uni-app-3.7.11.81746_20230428",
-    "calico:cni-v3.25.0",
+    # "calico:cni-v3.25.0",
     # "calico:node-v3.25.0",
     # "calico:kube-controllers-v3.25.0",
     # "clash:v1.16.0",
@@ -46,6 +46,7 @@ $buildImageList = @(
     # "mongo-express:1.0.0-alpha.4-wait-for-it",
     # "minio:RELEASE.2024-04-06T05-26-02Z",
     # "minio:RELEASE.2022-02-12T00-51-25Z",
+    "minio:RELEASE.2021-12-27T07-23-18Z",
     # "minio:windows-latest",
     # "mongo:4.2.8-bionic",
     # "mongo:7.0.11",
