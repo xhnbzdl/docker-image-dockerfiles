@@ -122,7 +122,8 @@ $syncSample = @(
     # "mysql:5.7.43",
     # "gitlab/gitlab-runner:v14.10.1",
     # "gcr.io/cadvisor/cadvisor:latest",
-    “selectdb/doris-debug-ubuntu:latest”,
+    # “selectdb/doris-debug-ubuntu:latest”,
+    "ubuntu:22.04",
     ""
 )
 
