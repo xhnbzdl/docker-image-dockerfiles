@@ -101,6 +101,7 @@ $buildImageList = @(
     # "rabbitmq:3.11.10-management",
     # "rabbitmq:3.8-management",
     # "rabbitmq:3.11.10-management-mqtt",
+    "ubuntu:doris-2.1.8.1",
     # "self-signed-ssl:openssl-1.1.1",
     # "wait-for-it:default",
     # "yacd:v0.3.8",
@@ -123,7 +124,7 @@ $syncSample = @(
     # "gitlab/gitlab-runner:v14.10.1",
     # "gcr.io/cadvisor/cadvisor:latest",
     # “selectdb/doris-debug-ubuntu:latest”,
-    "ubuntu:22.04",
+    # "ubuntu:22.04",
     ""
 )
 
