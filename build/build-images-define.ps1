@@ -46,7 +46,7 @@ $buildImageList = @(
     # "mongo-express:1.0.0-alpha.4-wait-for-it",
     # "minio:RELEASE.2024-04-06T05-26-02Z",
     # "minio:RELEASE.2022-02-12T00-51-25Z",
-    "minio:RELEASE.2021-12-27T07-23-18Z",
+    # "minio:RELEASE.2021-12-27T07-23-18Z",
     # "minio:windows-latest",
     # "mongo:4.2.8-bionic",
     # "mongo:7.0.11",
@@ -122,6 +122,7 @@ $syncSample = @(
     # "mysql:5.7.43",
     # "gitlab/gitlab-runner:v14.10.1",
     # "gcr.io/cadvisor/cadvisor:latest",
+    “selectdb/doris-debug-ubuntu:latest”,
     ""
 )
 
