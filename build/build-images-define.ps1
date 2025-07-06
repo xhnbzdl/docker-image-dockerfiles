@@ -32,7 +32,7 @@ $buildImageList = @(
     # ”dotnet-aspnet:6.0-windowsservercore-ltsc2022“,
     # ”dotnet-sdk:6.0-windowsservercore-ltsc2022“,
     # "dotnet-sdk:6.0",
-    # "dotnet-runtime:6.0",
+     "dotnet-runtime:6.0",
     # "docker-swarm-node-exporter:v0.16.0"
     # "dns-server:11.1.1",
     # "emqx:5.1.0",
